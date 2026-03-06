@@ -112,7 +112,7 @@ One mathematical civilization. Four layers.
 - Working Python simulation — 5,000 epochs
 - 120 validators, 4,000 delegators
 - Cartel, Sybil, and shock scenarios modeled
-- TIEKAT v8.1 upgrade in progress (ANC v0.2)
+- TIEKAT v8.1 upgrade complete (ANC v0.2)
 
 ---
 

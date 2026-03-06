@@ -8,12 +8,14 @@ Attribution: Hemavit (HQRMA, TIEKAT v8.1)
 
 ## v0.2.0 — TIEKAT v8.1 Upgrade (in progress)
 
-- Hemavit HQRMA path integral replaces cadence multiplier
-- HQRMA renormalization flow replaces flat EMA
-- 12-axis TIEKAT telemetry vector replaces 5-outcome p_v(k)
-- Unified L(t) per validator (same formula as PhiOS + TBRC)
-- Parallax ecosystem bridge (ANC ↔ PhiOS ↔ TBRC)
-- Gabriel Cardona technical summary report
+- Migration path from TIEKAT v6.6 to v8.1 implemented as additive side-by-side simulation (`anchor_sim_v0_2.py`), preserving v0.1.1a unchanged.
+- Hemavit path integral introduced for coherence-memory issuance gating.
+- HQRMA renormalization flow added as population-level coherence smoothing.
+- 12-axis TIEKAT telemetry vector added as the primary validator telemetry model.
+- Unified `L(t)` formulation aligned with ANC, PhiOS, and TBRC.
+- Optional Parallax bridge added with graceful no-op behavior when PhiOS/TBRC are unavailable.
+- Report artifacts expanded with simulation markdown report, bridge export, and Gabriel technical summary.
+- Backward compatibility retained via feature flags for legacy-style telemetry/smoothing/issuance pathways.
 
 ## v0.1.1a — Initial Simulation (February 11, 2026)
 

@@ -120,11 +120,22 @@ One mathematical civilization. Four layers.
 ```bash
 git clone https://github.com/MichaelWave369/ANC
 cd ANC
+```
+
+**v0.2 (TIEKAT v8.1 — current):**
+```bash
+python anchor_sim_v0_2.py
+```
+
+**v0.1.1a (TIEKAT v6.6 — original):**
+```bash
 python anchor_sim_v0_1_1a.py
 ```
 
 Output written to `out/`:
 ```
+anchor_sim_v0_2_metrics.csv
+anchor_sim_v0_2_summary.json
 anchor_sim_v0_1_1a_metrics.csv
 anchor_sim_v0_1_1a_summary.json
 ```
@@ -136,7 +147,7 @@ anchor_sim_v0_1_1a_summary.json
 | Phase | Status | Description |
 |-------|--------|-------------|
 | 0 — Spec + Simulation | ✅ Complete | Whitepaper + Python sim |
-| 0.2 — TIEKAT v8.1 | 🔄 In Progress | Hemavit HQRMA upgrade |
+| 0.2 — TIEKAT v8.1 | ✅ Complete | Hemavit HQRMA upgrade |
 | 1 — Testnet | 📋 Planned | PoS + Finality + Slashing |
 | 2 — Recursive Yield | 📋 Planned | ZK/Storage Proofs |
 | 3 — Mainnet | 📋 Planned | Audits + Launch |

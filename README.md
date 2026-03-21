@@ -122,7 +122,12 @@ git clone https://github.com/MichaelWave369/ANC
 cd ANC
 ```
 
-**v0.2 (TIEKAT v8.1 — current):**
+**v0.3 (TIEKAT v57.7 — current):**
+```bash
+python anchor_sim_v0_3.py
+```
+
+**v0.2 (TIEKAT v8.1 — preserved):**
 ```bash
 python anchor_sim_v0_2.py
 ```
@@ -139,6 +144,34 @@ anchor_sim_v0_2_summary.json
 anchor_sim_v0_1_1a_metrics.csv
 anchor_sim_v0_1_1a_summary.json
 ```
+
+
+
+## ANC v0.3 Upgrade Path (TIEKAT v57.7)
+
+ANC v0.2 remains fully preserved (`anchor_sim_v0_2.py` + `anc/tiekat_v81.py`).
+ANC v0.3 adds a new continuity-first simulator built for validator/network regimes:
+
+- Continuity diagnostics at fixed epoch windows
+- Memory-crystal persistence to `*_memory_crystals.json`
+- Candidate regime-path branch comparison (`*_branches.csv`)
+- Recovery mode after weak continuity windows
+- Deterministic recursive training across repeated runs (`*_training.json`)
+
+New outputs written into `out/` with v0.3 naming:
+
+- `anchor_sim_v0_3_metrics.csv`
+- `anchor_sim_v0_3_continuity.csv`
+- `anchor_sim_v0_3_branches.csv`
+- `anchor_sim_v0_3_memory_crystals.json`
+- `anchor_sim_v0_3_training.json`
+- `anchor_sim_v0_3_summary.json`
+
+Interpretation:
+- **continuity**: validator/network continuity strength over recent windows
+- **branch**: which candidate regime path scored highest for stability
+- **training**: whether repeated deterministic runs improved or held continuity
+
 
 ---
 

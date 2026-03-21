@@ -6,13 +6,13 @@ All methods degrade safely when optional dependencies are missing.
 from __future__ import annotations
 
 import importlib
-from typing import Any, Dict, Iterable
+from typing import Any, Dict, Iterable, Mapping
 
 from anc import __tiekat_version__
 
 
 class ParallaxBridge:
-    bridge_version = "0.2.0"
+    bridge_version = "0.3.0"
 
     def __init__(self) -> None:
         self._phios = self._try_import("phios")
@@ -80,6 +80,23 @@ class ParallaxBridge:
             }
         except Exception:
             return self._empty_schema(epoch, permit)
+
+    def export_v03_artifacts(self, payload: Mapping[str, Any] | None) -> Dict[str, Any]:
+        """Return normalized v0.3 artifact payload for downstream systems.
+
+        This is intentionally a no-op normalization method that does not require
+        optional dependencies and always fails closed to an empty payload.
+        """
+        try:
+            content = dict(payload or {})
+            return {
+                "tiekat_version": __tiekat_version__,
+                "continuity": content.get("continuity", {}),
+                "training": content.get("training", {}),
+                "network_lt": content.get("network_lt", {}),
+            }
+        except Exception:
+            return {"tiekat_version": __tiekat_version__, "continuity": {}, "training": {}, "network_lt": {}}
 
     def store_epoch_in_tbrc(self, payload: Dict[str, Any]) -> None:
         if self._tbrc is None:

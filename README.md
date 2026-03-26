@@ -104,6 +104,47 @@ One mathematical civilization. Four layers.
 
 ---
 
+
+## ANC vNext — Coherence Trust Plane
+
+ANC remains the **economic coherence layer** in the Parallax ecosystem, including
+the existing Anchor validator/simulator lineage and continuity-first model path.
+
+The repository is now also being extended toward a broader **coherence-native
+trust plane** for sovereign systems. This vNext direction introduces architecture
+and scaffolding for four planned protection domains:
+
+- Input protection
+- Runtime protection
+- Memory protection
+- Output protection
+
+Current status remains simulator/spec dominant. The trust engine is **not** fully
+implemented yet; the formal architecture for ANC v1.0 is now documented in
+[`docs/anc_v1_architecture.md`](docs/anc_v1_architecture.md) as the implementation
+expansion path.
+
+---
+
+## ANC vNext — TIEKAT v69 Security Field Alignment
+
+ANC is evolving from coherence-weighted economic security into a broader
+coherence trust-plane architecture. In this path, **TIEKAT v69** introduces
+an explicit 12-face, topology-aware security field model for trust posture.
+
+Planned ANC trust posture logic will evaluate:
+
+- field shape across faces (not only scalar averages)
+- weakest-face risk and localized collapse
+- fragmentation/variance across the field
+- edge transfer and recovery-emergence behavior
+
+Current repository status remains simulator/spec dominant. This v69 direction
+is documented as architecture and scaffolding, not as a fully implemented trust
+runtime yet. See [`docs/anc_v1_architecture.md`](docs/anc_v1_architecture.md).
+
+---
+
 ## Current Status: Phase 0 ✅
 
 **Spec + Simulation complete.**
@@ -189,12 +230,13 @@ Interpretation:
 
 ## License
 
-**GNU General Public License v3.0**
+**GNU Affero General Public License v3.0 (AGPL-3.0)**
 
 ANC is sovereign software. The mathematics belongs
-to everyone. Corporate capture of this codebase
-is legally prevented by design — mirroring the
-Anti-Capture Operator 𝒞 in the protocol itself.
+to everyone. AGPL-3.0 is intentional: it protects ANC
+against silent SaaS/network appropriation, keeps
+network-exposed modifications reciprocal, and mirrors
+the Anti-Capture Operator 𝒞 in the protocol itself.
 
 ---
 

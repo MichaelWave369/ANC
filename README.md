@@ -230,12 +230,13 @@ Interpretation:
 
 ## License
 
-**GNU General Public License v3.0**
+**GNU Affero General Public License v3.0 (AGPL-3.0)**
 
 ANC is sovereign software. The mathematics belongs
-to everyone. Corporate capture of this codebase
-is legally prevented by design — mirroring the
-Anti-Capture Operator 𝒞 in the protocol itself.
+to everyone. AGPL-3.0 is intentional: it protects ANC
+against silent SaaS/network appropriation, keeps
+network-exposed modifications reciprocal, and mirrors
+the Anti-Capture Operator 𝒞 in the protocol itself.
 
 ---
 

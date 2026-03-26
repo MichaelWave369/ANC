@@ -9,8 +9,8 @@ mathematically. Our development process reflects this.
 
 ## License
 
-All contributions are GPL v3. By contributing you agree
-your code is open forever.
+All contributions are AGPL-3.0. By contributing you agree
+your code remains open and reciprocal, including network-exposed use.
 
 ## Attribution Rule
 

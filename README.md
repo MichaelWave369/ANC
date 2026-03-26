@@ -104,6 +104,28 @@ One mathematical civilization. Four layers.
 
 ---
 
+
+## ANC vNext — Coherence Trust Plane
+
+ANC remains the **economic coherence layer** in the Parallax ecosystem, including
+the existing Anchor validator/simulator lineage and continuity-first model path.
+
+The repository is now also being extended toward a broader **coherence-native
+trust plane** for sovereign systems. This vNext direction introduces architecture
+and scaffolding for four planned protection domains:
+
+- Input protection
+- Runtime protection
+- Memory protection
+- Output protection
+
+Current status remains simulator/spec dominant. The trust engine is **not** fully
+implemented yet; the formal architecture for ANC v1.0 is now documented in
+[`docs/anc_v1_architecture.md`](docs/anc_v1_architecture.md) as the implementation
+expansion path.
+
+---
+
 ## Current Status: Phase 0 ✅
 
 **Spec + Simulation complete.**

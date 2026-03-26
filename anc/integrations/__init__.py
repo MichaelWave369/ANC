@@ -6,6 +6,15 @@ from anc.integrations.phikernel_hooks import (
     post_service_run_guard,
     pre_service_run_guard,
 )
+from anc.integrations.phikernel_governance import (
+    GovernanceActionPlan,
+    apply_governance_plan_to_context,
+    build_governance_incident,
+    plan_memory_write_governance,
+    plan_output_governance,
+    plan_post_service_governance,
+    plan_pre_service_governance,
+)
 from anc.integrations.phikernel_soc_adapter import (
     DEFAULT_FACE_BASELINE,
     IntegrationGuardResult,
@@ -24,6 +33,13 @@ __all__ = [
     "guard_memory_records",
     "guard_output_text",
     "guard_runtime_commands",
+    "GovernanceActionPlan",
+    "plan_pre_service_governance",
+    "plan_post_service_governance",
+    "plan_memory_write_governance",
+    "plan_output_governance",
+    "apply_governance_plan_to_context",
+    "build_governance_incident",
     "memory_write_guard",
     "output_guard",
     "post_service_run_guard",

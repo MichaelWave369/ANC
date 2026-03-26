@@ -1,228 +1,289 @@
-# ANC v1.0 — Coherence Trust Plane Architecture
+# ANC v1.0 — Coherence Trust Plane Architecture (TIEKAT v69 Aligned)
 
 ## 1) Purpose
 
-ANC v1.0 extends Anchor from a pure economic coherence simulator into a dual-domain architecture:
+ANC v1.0 preserves ANC's simulator/economic lineage while extending ANC into a dual-domain architecture:
 
-1. **Economic coherence domain** (existing): validator telemetry, coherence-weighted consensus, anti-capture economics, and simulation lineage.
-2. **Security coherence domain** (new): trust, defense, anti-contamination, and anti-jailbreak controls for sovereign systems.
+1. **Economic coherence domain (existing):** Anchor validator economics, anti-capture logic, and continuity-first simulation pathways.
+2. **Security coherence domain (new):** trust/defense posture, anti-contamination controls, and policy enforcement for sovereign local-first systems.
 
-In the broader PHI369 stack, ANC v1.0 is positioned as a coherence-native trust plane that interoperates with:
+ANC remains aligned with the PHI369 stack:
 
-- **TIEKAT** as the mathematical substrate and signal grammar.
-- **PhiKernel** as runtime execution and policy-hook surface.
-- **PhiOS** as observability and operator-facing posture view.
+- **TIEKAT:** mathematical substrate and field geometry grammar.
+- **ANC Trust Plane:** security interpretation, posture, and enforcement decisions.
+- **PhiKernel:** runtime hooks where trust decisions are applied.
+- **PhiOS:** observability surface for posture, incidents, and continuity state.
 
-Distinctions:
-
-- **Math substrate**: TIEKAT equations and coherence transforms.
-- **Trust engine**: ANC scoring, posture state, and enforcement decisions.
-- **Runtime**: PhiKernel process/control surfaces where controls are applied.
-- **Observatory**: PhiOS displays incidents, posture transitions, and continuity health.
-
-This document is an architecture/spec layer, not a claim that the full trust engine is already implemented.
+This document is architecture/specification guidance. It does **not** claim that the full v69 trust engine is already implemented.
 
 ## 2) Mission
 
-ANC v1.0 security coherence mission:
+ANC security-coherence mission is to protect sovereign systems against:
 
-- Resist jailbreak attempts.
-- Resist prompt injection.
-- Detect and contain memory poisoning.
-- Detect retrieval contamination.
-- Detect runtime anomalies.
-- Reduce output leakage.
-- Protect continuity from corruption over time.
-- Resist policy capture or silent policy drift.
-- Detect malware-like behavior in local-first sovereign environments.
+- jailbreak attacks
+- prompt injection
+- memory poisoning
+- retrieval contamination
+- runtime anomalies
+- output leakage
+- continuity corruption
+- policy capture
+- malware-like behavior in local-first execution contexts
 
 ## 3) Core Philosophy
 
-Traditional security often optimizes for perimeter controls and static rules.
-Coherence-native security optimizes for **continuity integrity under adversarial pressure**.
+Traditional security centers on perimeter and static rule sets.
+ANC security centers on **coherent continuity over time and topology**.
 
-ANC framing:
+Key framing:
 
-- **Sovereignty**: system decisions remain local, inspectable, and policy-bound.
-- **Continuity**: trusted behavior remains stable across sessions and updates.
-- **Anchor integrity**: trusted baselines (anchors) are preserved, and drift is measurable.
+- **Sovereignty:** decisions and controls remain inspectable and local.
+- **Continuity:** trusted behavior remains stable across sessions and updates.
+- **Anchor Integrity:** trusted baselines must stay measurable and recoverable.
+- **Shape-aware security:** a high global average is insufficient if local regions collapse.
 
-The aim is not only to block known attacks, but to preserve coherent identity and mission over time.
+## 4) TIEKAT v69 Alignment
 
-## 4) Four Protection Layers
+ANC trust posture is now modeled using a **12-face dodecahedron coherence field** rather than only scalar coherence.
+
+Implication:
+
+- Previous scalar security coherence remains useful as a summary.
+- Primary trust logic moves to **face-aware and topology-aware analysis** of the security field.
+- Posture transitions should account for field shape, not only global magnitude.
+
+## 5) 12-Face Security Field Model
+
+ANC v1.0 security state is represented over a 12-face field.
+
+Conceptual components:
+
+- `face_scores`: score per face in \([0,1]\)
+- `weakest_face`: face index with minimum security score
+- `field_variance`: spread of security across faces
+- `field_balance`: balanced vs fragmented field condition
+- `edge_flow`: transfer quality across adjacent faces
+- `vertex_emergence`: emergent stability score from face/edge interactions
+
+Security interpretation:
+
+- **Localized degradation:** one/few faces collapse while global mean remains moderate.
+- **System-wide degradation:** broad decline across most faces with weak edge support.
+
+## 6) Security Shape vs Security Magnitude
+
+A scalar average can hide critical weak points.
+
+- **Security magnitude:** global average of face scores (useful but incomplete).
+- **Security shape:** distribution and topology of scores across faces/edges/vertices.
+
+Why this matters:
+
+- A system with acceptable mean score can still be exploitable via one collapsed face.
+- High variance often indicates fragmentation and potential cascade risk.
+- Weak edge flow impairs containment and recovery propagation.
+
+## 7) Four Protection Layers
 
 ### Input Guard
 
-Evaluates inbound prompts, tool requests, retrieval chunks, and operator instructions for adversarial signatures.
+Evaluates prompts, retrieved chunks, and operator directives for adversarial content; maps detected pressure to one or more field faces.
 
 ### Runtime Guard
 
-Monitors execution-time behavior: command intent, process anomalies, policy bypass attempts, and suspicious escalation paths.
+Monitors execution behavior, privilege boundaries, and command trajectories; updates face and edge risk states in real time.
 
 ### Memory Guard
 
-Protects persistent and short-term memory channels against poisoning, contamination, and continuity drift.
+Protects short/long-term memory channels from poisoning and continuity drift; tracks persistence-contamination topology.
 
 ### Output Guard
 
-Screens generated responses/actions for data leakage, policy violation, covert exfiltration, and harmful autonomy patterns.
+Evaluates outputs for leakage/policy breaches; measures whether risky patterns are localized or propagating across field topology.
 
-## 5) Core Entities
+## 8) Face-Aware Threat Mapping (Proposed)
+
+This is an architectural proposal, not a final scientific claim.
+
+Potential domain-to-face mappings may include:
+
+- foundation / boot trust
+- continuity / memory persistence
+- integrity / tamper resistance
+- logic / command correctness
+- memory / poisoning resistance
+- recovery / quarantine viability
+- stability / sustained safe posture
+- observer / operator/meta-detection
+
+Remaining faces may represent additional policy/runtime/retrieval/output domains as calibration data matures.
+
+## 9) Core Entities
 
 ### ThreatSignal
 
-A normalized representation of a suspected threat event from any guard layer.
+Normalized threat event with topology hints.
 
-Possible conceptual fields:
+Example conceptual fields:
 
-- `signal_type` (e.g., jailbreak, injection, anomaly)
-- `source_layer` (input/runtime/memory/output)
-- `severity`
-- `confidence`
-- `timestamp`
-- `context_ref`
+- `signal_type`, `source_layer`, `severity`, `confidence`, `timestamp`
+- `face_targets` (candidate impacted faces)
+- `edge_implications` (possible spread routes)
 
 ### CoherenceSecurityState
 
-The current security/coherence status of a protected session or node.
+Shape-aware security state snapshot.
 
-Possible conceptual fields:
+Example conceptual fields:
 
+- `face_scores`
+- `weakest_face`
+- `field_variance`
+- `edge_flow`
+- `vertex_emergence`
 - `posture`
-- `threat_pressure`
-- `contamination_load`
 - `anchor_integrity`
-- `recovery_viability`
-- `active_constraints`
 
 ### GuardDecision
 
-A policy-bound enforcement decision derived from detected signals and current posture.
+Policy-bound enforcement decision with topology rationale.
 
-Possible conceptual fields:
+Example conceptual fields:
 
 - `action`
 - `rationale`
-- `required_followups`
+- `shape_risk_flags`
 - `policy_trace`
 
 ### IncidentRecord
 
-Immutable event record for forensic continuity, auditing, and posture history.
+Immutable incident record for forensic continuity.
 
-Possible conceptual fields:
+Example conceptual fields:
 
 - `incident_id`
 - `signals`
+- `pre_state` / `post_state`
 - `decision`
-- `impact_scope`
-- `resolution_state`
+- `affected_faces`
 - `continuity_delta`
 
-## 6) Core Metrics / Formulas
+## 10) Revised Metrics / Formulas (Architecture-Level)
 
-These are architecture-level concepts for ANC v1.0 planning, not production-validated claims.
+These formulas are design notation for v1.0 planning, not production-validated claims.
 
-### Threat Pressure Θ(t)
-
-A time-varying aggregate pressure from active threats.
+### Security Field Vector
 
 \[
-\Theta(t) = \sum_i w_i \cdot s_i(t)
+\mathbf{F}_{sec}(t) = [f_1(t), f_2(t), \dots, f_{12}(t)], \quad f_i \in [0,1]
 \]
 
-Where:
-
-- \(s_i(t)\) is normalized signal intensity.
-- \(w_i\) is detector/policy weighting.
-
-### Security Coherence \(C_{sec}\)
-
-A bounded measure of security continuity quality.
+### Scalar Summary (Optional)
 
 \[
-C_{sec} \in [0,1], \quad C_{sec} = f(A_{int}, 1-\Lambda, 1-\Theta)
+\bar{F}_{sec}(t) = \frac{1}{12}\sum_{i=1}^{12} f_i(t)
 \]
 
-Higher values indicate stronger coherent security behavior.
-
-### Contamination Load Λ
-
-Estimated contamination burden across inputs, memory, and retrieved context.
+### Weakest Security Face
 
 \[
-\Lambda \in [0,1]
+f_{\min}(t) = \min_i f_i(t), \qquad i_{\min}=\arg\min_i f_i(t)
 \]
 
-Higher values indicate higher contamination risk.
-
-### Anchor Integrity \(A_{int}\)
-
-How well current behavior remains aligned with trusted anchors.
+### Field Variance / Fragmentation
 
 \[
-A_{int} \in [0,1]
+\sigma_F^2(t)=\frac{1}{12}\sum_{i=1}^{12}(f_i(t)-\bar{F}_{sec}(t))^2
 \]
 
-Lower values imply integrity drift or anchor tampering.
+Higher \(\sigma_F^2\) suggests fragmentation risk.
 
-### Recovery Viability \(R_v\)
+### Edge Transfer / Edge Flow
 
-Estimated ability to recover from current degraded/hostile state without full reset.
+For adjacency set \(E\):
 
 \[
-R_v \in [0,1]
+\Phi_E(t)=\frac{1}{|E|}\sum_{(i,j)\in E} g_{ij}(t)
 \]
 
-Used to choose between corrective actions and hard isolation.
+Where \(g_{ij}(t)\) measures healthy transfer/containment capability along edge \((i,j)\).
 
-## 7) Posture Model
+### Contamination Topology
 
-ANC v1.0 posture ladder:
+\[
+\Lambda_{topo}(t)=h(\mathbf{F}_{sec}(t), E, \text{threat signals})
+\]
 
-- **SAFE**: normal operation, low threat pressure.
-- **WATCH**: elevated suspicion; increased monitoring and light constraints.
-- **DEGRADED**: active risk; apply reduced capability and stricter policy checks.
-- **HOSTILE**: high-confidence adversarial behavior; isolation-heavy controls.
-- **QUARANTINED**: strict containment pending review/reset/recovery.
+Captures whether contamination is localized, edge-propagating, or field-wide.
 
-Posture transitions are driven by \(\Theta(t)\), \(C_{sec}\), \(\Lambda\), \(A_{int}\), and \(R_v\).
+### Recovery Vertex Score
 
-## 8) Enforcement Actions
+For candidate recovery vertices \(V\):
 
-Policy actions available to guards:
+\[
+R_v(t)=\max_{k\in V} r_k(t)
+\]
 
-- `allow`: proceed normally.
-- `warn`: proceed with explicit warning/trace.
-- `redact`: remove sensitive/high-risk segments.
-- `shadow`: execute with non-authoritative side effects for observation.
-- `sandbox`: restrict execution scope and capabilities.
-- `quarantine`: isolate context/session from broader system.
-- `refuse`: reject instruction/action.
-- `seal`: lock state/channel pending trusted operator process.
+Where \(r_k\) estimates viable recovery emergence at vertex \(k\).
 
-## 9) Integration Points
+## 11) Shape-Aware Posture Model
+
+ANC posture states remain:
+
+- **SAFE**
+- **WATCH**
+- **DEGRADED**
+- **HOSTILE**
+- **QUARANTINED**
+
+Posture transitions should consider:
+
+- one-face collapse (very low \(f_{\min}\))
+- high variance / fragmentation (high \(\sigma_F^2\))
+- weak edge transfer (low \(\Phi_E\))
+- unstable recovery emergence (low/volatile \(R_v\))
+
+This prevents overreliance on only global-score thresholds.
+
+## 12) Enforcement Actions
+
+Available actions:
+
+- `allow`
+- `warn`
+- `redact`
+- `shadow`
+- `sandbox`
+- `quarantine`
+- `refuse`
+- `seal`
+
+Shape-aware policy examples (architectural intent):
+
+- one-face collapse + high confidence threat → `sandbox` / `quarantine`
+- fragmentation with uncertain attribution → `warn` + `shadow` + targeted constraints
+- strong contamination topology + low recovery vertex → `seal`
+
+## 13) Integration Points
 
 ### TIEKAT Integration
 
-- Reuse coherence calculus and smoothing for security signal normalization.
-- Align threat-state metrics with existing coherence language.
+- use v69 field language for face/edge/vertex security interpretation
+- preserve scalar summary compatibility for dashboards and backward readability
 
 ### PhiKernel Hooks
 
-- Guard callouts before command/tool execution.
-- Runtime anomaly feed into posture updates.
-- Policy enforcement checkpoints around privileged actions.
+- pre-execution guard scoring by face
+- runtime updates for edge-flow degradation and propagation risk
+- posture-driven enforcement checkpoints
 
 ### PhiOS View Model
 
-- Operator posture dashboard (SAFE → QUARANTINED).
-- Incident timeline and continuity deltas.
-- Human review pathways for quarantine/seal events.
+- field-shape visualization (12-face health map)
+- weakest-face and fragmentation indicators
+- incident timeline with localized vs system-wide degradation flags
 
-## 10) Proposed Repo Structure
-
-Future-facing structure preserving ANC economic lineage:
+## 14) Proposed Repo Structure
 
 ```text
 ANC/
@@ -254,58 +315,57 @@ ANC/
 └── tests/
 ```
 
-## 11) Recommended Detector Set for v1.0
+## 15) Detector Roadmap (v1.0)
 
-Initial detector families:
+Recommended initial detector families:
 
-- Jailbreak detector.
-- Prompt injection detector.
-- Suspicious command/code detector.
-- Memory contamination detector.
-- Output leakage detector.
-- Drift/anomaly detector.
+- jailbreak detector
+- injection detector
+- suspicious command/code detector
+- memory contamination detector
+- output leakage detector
+- drift/anomaly detector
 
-These should be introduced incrementally with explicit false-positive/false-negative evaluation.
+Future versions should include face-target calibration and topology propagation tagging per detector output.
 
-## 12) Build Phases
+## 16) Build Phases
 
-### Phase 1: Core Trust Engine
+### Phase 1: Core trust state engine
 
-- Core models (signals, posture, decisions, incidents).
-- Scoring and posture-transition rules.
-- Policy action selection framework.
+- implement topology-aware state models (`face_scores`, `weakest_face`, `field_variance`, `edge_flow`, `vertex_emergence`)
+- define posture transition rules using shape-aware thresholds
 
-### Phase 2: Detectors
+### Phase 2: Detector integration
 
-- Implement baseline detector set.
-- Add calibration harness and threshold tuning.
+- attach detector outputs to face/edge threat mapping
+- calibrate confidence and propagation semantics
 
-### Phase 3: PhiKernel Hooks
+### Phase 3: PhiKernel hook-in
 
-- Integrate guard checkpoints with runtime and tools.
-- Enforce action pathways (`sandbox`, `quarantine`, `seal`).
+- enforce shape-aware actions at runtime checkpoints
+- support containment/recovery transitions
 
-### Phase 4: PhiOS Surface
+### Phase 4: PhiOS observatory surface
 
-- Posture visualization.
-- Incident observability and operator workflows.
+- visualize field shape, weakest-face risk, fragmentation, and recovery pathways
+- support human-in-the-loop incident resolution
 
-## 13) Success Criteria
+## 17) Success Criteria
 
-ANC v1.0 is successful when:
+ANC v1.0 succeeds when:
 
-- Economic simulator lineage remains intact and reproducible.
-- Threat signals can be normalized into stable posture transitions.
-- Guard decisions are deterministic, auditable, and policy-traceable.
-- Quarantine and recovery flows maintain continuity integrity.
-- Integration hooks support sovereign, local-first operation without cloud dependency assumptions.
+- economic simulator lineage remains intact and reproducible
+- trust posture is explainable in face/edge/vertex terms
+- one-face collapse and fragmentation are detected before broad compromise
+- enforcement decisions are policy-traceable and topology-rationalized
+- recovery workflows preserve continuity and anchor integrity
 
-## 14) Immediate Next Step
+## 18) Immediate Next Step
 
-Implement the **core models + posture + scoring engine** first:
+Implement the **core topology-aware trust models and scoring engine** (still lightweight):
 
-1. Define `ThreatSignal`, `CoherenceSecurityState`, `GuardDecision`, and `IncidentRecord` as concrete Python models.
-2. Implement baseline scoring for \(\Theta(t)\), \(\Lambda\), \(A_{int}\), \(R_v\), and derived \(C_{sec}\).
-3. Add a deterministic posture-transition state machine with tests.
+1. Define Python models for `ThreatSignal`, `CoherenceSecurityState`, `GuardDecision`, and `IncidentRecord` with face-aware fields.
+2. Implement deterministic calculations for `face_scores`, `weakest_face`, `field_variance`, `edge_flow`, and `vertex_emergence` as architecture baselines.
+3. Add posture-transition unit tests for one-face collapse, fragmented field, and weak-recovery scenarios.
 
-This creates a stable foundation for detectors and runtime integration in later phases.
+No full detector/guard runtime implementation should be done before this model layer is stable.

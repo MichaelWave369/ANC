@@ -126,6 +126,25 @@ expansion path.
 
 ---
 
+## ANC vNext — TIEKAT v69 Security Field Alignment
+
+ANC is evolving from coherence-weighted economic security into a broader
+coherence trust-plane architecture. In this path, **TIEKAT v69** introduces
+an explicit 12-face, topology-aware security field model for trust posture.
+
+Planned ANC trust posture logic will evaluate:
+
+- field shape across faces (not only scalar averages)
+- weakest-face risk and localized collapse
+- fragmentation/variance across the field
+- edge transfer and recovery-emergence behavior
+
+Current repository status remains simulator/spec dominant. This v69 direction
+is documented as architecture and scaffolding, not as a fully implemented trust
+runtime yet. See [`docs/anc_v1_architecture.md`](docs/anc_v1_architecture.md).
+
+---
+
 ## Current Status: Phase 0 ✅
 
 **Spec + Simulation complete.**

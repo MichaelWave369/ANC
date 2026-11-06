@@ -1,11 +1,11 @@
 # ANC License History & Rights Review
 
-## Proposed current license
+## Current root software license (November 6, 2026)
 
 The root [LICENSE](LICENSE) contains the MIT License, with copyright notice
 "Copyright (c) 2026 Michael Hughes / PHI369 Labs".
 
-**This transition is presented as a pull request for rights-holder review.**
+**PR #16 was merged on November 6, 2026. A merge is not proof that all third-party rights are cleared.**
 MIT coverage applies to code and documentation for which the named rightsholder
 owns or has permission to grant MIT rights. GitHub repository ownership, sole
 commit authorship, or attribution alone does **not** establish ownership of
@@ -16,7 +16,7 @@ every underlying contribution or asset.
 - Early ANC history: **GPL-3.0**, visible in the March 2026 license transition.
 - March 26, 2026: switched to **AGPL-3.0** in commit
   [ea41644](https://github.com/MichaelWave369/ANC/commit/ea41644c0cd312245f82de93ce3cfafc60f33ecd).
-- November 2026: MIT licensing **proposed**, following addition of the
+- November 6, 2026: MIT license adopted in [PR #16](https://github.com/MichaelWave369/ANC/pull/16), following addition of the
   ANC-to-PhiShield R1 advisory interface.
 
 Earlier releases already received under GPL-3.0 or AGPL-3.0 remain usable
@@ -24,7 +24,7 @@ under those historical grants. A new MIT grant cannot revoke rights already
 given to earlier recipients, nor automatically relicense contributions made by
 another rightsholder without permission.
 
-## Before merging the MIT change
+## Ongoing rights review after merge
 
 Confirm that **all software contributions** to be offered under MIT were
 authored/owned by Michael Hughes / PHI369 Labs or have the necessary

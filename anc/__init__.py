@@ -1,4 +1,4 @@
-"""ANC v0.3 package (MIT license proposed; see LICENSE_HISTORY.md).
+"""ANC v0.3 package (MIT for original code; see LICENSE_HISTORY.md).
 
 Anchor (ANC) is sovereign software by PHI369 Labs.
 This package preserves the economic simulator lineage (v0.1.1a/v0.2/v0.3)

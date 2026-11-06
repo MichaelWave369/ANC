@@ -126,6 +126,26 @@ expansion path.
 
 ---
 
+## ANC ↔ PhiShield R1 — Advisory Contract
+
+ANC now has a **prototype, versioned, non-authoritative risk advisory** adapter and a
+side-effect-free PhiShield-like reference consumer. The contract takes existing ANC
+detector/scoring results through a strict, request-bound JSON envelope and exercises
+identity/consent separation, replay and expiry checks, injection detection, memory
+poisoning, and runtime anomaly handling.
+
+**This is not a deployed PhiShield service or production security control.** It
+does not issue credentials, mint permissions, execute actions, require coins, or
+authenticate remote producers. Real authorization remains with PhiOS/PhiShield.
+
+See [ANC ↔ PhiShield R1 contract and tests](docs/ANC_PHISHIELD_R1_CONTRACT.md).
+
+```bash
+python -m unittest -v tests.test_phishield_contract
+```
+
+---
+
 ## ANC vNext — TIEKAT v69 Security Field Alignment
 
 ANC is evolving from coherence-weighted economic security into a broader

@@ -250,13 +250,21 @@ Interpretation:
 
 ## License
 
-**GNU Affero General Public License v3.0 (AGPL-3.0)**
+**MIT License (proposed transition).** ANC's original software is being
+prepared for MIT licensing to support reuse in PhiOS, PhiCloud, PhiID,
+and future PhiShield integrations, including proprietary applications.
 
-ANC is sovereign software. The mathematics belongs
-to everyone. AGPL-3.0 is intentional: it protects ANC
-against silent SaaS/network appropriation, keeps
-network-exposed modifications reciprocal, and mirrors
-the Anti-Capture Operator 𝒞 in the protocol itself.
+Historical GPL-3.0 and AGPL-3.0 releases keep their original grants.
+The new license does not erase existing rights or automatically relicense
+independent third-party contributions, the whitepaper, or infographics.
+Before merging, verify that the relevant rightsholders have approved the
+change. See [LICENSE](LICENSE), [LICENSE_HISTORY.md](LICENSE_HISTORY.md),
+and [CONTRIBUTING.md](CONTRIBUTING.md).
+
+MIT promotes reuse, but does **not** require downstream source sharing or
+protect against centralized proprietary derivatives. The original ANC
+anti-capture research remains part of the protocol design, not a condition
+created by MIT licensing.
 
 ---
 

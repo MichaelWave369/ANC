@@ -1,282 +1,130 @@
-# ⚓ Anchor (ANC)
-## The First Coherence-Backed Cryptocurrency
-### Beyond Speculation, Into Resonance.
+# ANC | Anchor
 
-> "We did not come here to improve the financial cage.
->  We came here to end it."
+**Coherence-aware risk signals for sovereign software.**  
+A PHI369 Labs research and integration project.
 
----
+ANC began as a coherence-weighted cryptocurrency **simulation**. Its active engineering direction is a **local-first, inspectable trust-advisory layer** for the PhiOS ecosystem: detect selected risky patterns, summarize system posture, and pass bounded evidence to an independently authorized policy engine.
 
-## What Is ANC?
+> **Project status:** Experimental components and testable interfaces, **not** a production security product, deployed cryptocurrency, operating blockchain, or live authorization service.
 
-Anchor is a cryptocurrency whose validators are selected
-not by how much energy they burn or how much capital
-they hold — but by how **coherent** they are.
+## What exists today
 
-Coherence is measurable. Coherence is mathematical.
-Coherence cannot be bought.
+| Component | Implemented | Important boundary |
+| --- | --- | --- |
+| Threat signal detectors | Deterministic rules for selected prompt-injection, jailbreak, runtime-command, memory-contamination, and output-leakage patterns | Pattern matches are signals, not comprehensive protection or proof of malicious intent |
+| Coherence trust-state model | 12-face security field, topology summaries, posture scoring, and recommended responses | Model outputs are research heuristics, not authenticated identity or validated security guarantees |
+| PhiKernel-style adapters | Pre/post-service, memory-write, and output-commit guard interpretations | Produce in-process plans and outcomes; do **not** launch sandboxes, terminate processes, or enforce OS permissions |
+| ANC ↔ PhiShield advisory R1 | Strict, request-bound, expiring JSON-compatible risk envelope with negative-path tests | Unsigned and advisory-only; cannot issue tokens, approve capabilities, or authenticate a remote producer |
+| PhiOS observability model | Structures for posture, affected faces, incident views, and recommended actions | Presentation data, not a deployed security dashboard |
+| Anchor v0.1–v0.3 simulations | Preserved validator, anti-capture, network-shock, and continuity experiments | Simulated economics and consensus; **no** live ANC network, mainnet, wallet, or payment requirement |
 
----
+Key source: [core models](anc/core/models.py) · [detectors](anc/detectors) · [integration adapters](anc/integrations) · [simulators](anchor_sim_v0_3.py)
 
-## Visual Overview
+## Where ANC fits in the Phi ecosystem
 
-![ANC Overview](docs/infographics/01_overview.png)
-![Architecture](docs/infographics/02_architecture.png)
-![Pillars Part 1](docs/infographics/03_pillars_1.png)
-![Pillars Part 2](docs/infographics/04_pillars_2.png)
-![Security](docs/infographics/05_security.png)
-
----
-
-## The Core Formula
-```
-Ψᵇ = (M̂ · Λ̂ · α) / (ΔŜ + ε)
-```
-
-**Signal over noise.**
-Capacity × connectivity × alignment, divided by entropy.
-
-A high-coherence validator earns eligibility.
-A chaotic validator earns nothing.
-A whale with low coherence loses to a small honest node.
-
----
-
-## Consensus: CWPoR
-
-**Coherence-Weighted Proof of Resonance**
-```
-W_v = effStake · (1 + k_Ψ · Ψᵇ) · (1 - 𝒞_vv)
+```text
+PhiOS / PhiCloud / apps / operators
+                  |
+            request + context
+                  |
+          ANC: detect & assess
+          risk / posture / signals
+                  |
+           bounded advisory
+                  |
+         PhiShield policy layer
+        (reference consumer in
+              PhiCloud)
+                  |
+     independently verified identity,
+       capabilities, and consent
+                  |
+       PhiOS / service authority
+         makes final decision
 ```
 
-- Start with stake (skin in the game)
-- **Boost** if coherence is high
-- **Penalize** if capture risk is high
+**Separation of duties matters:**
 
-A medium-stake, high-coherence node can outperform
-a high-stake, low-coherence whale. Always.
+- **PhiID** is the identity direction. A coherence score does not prove who somebody is.
+- **ANC** assesses selected risk signals and continuity. Its results **never** grant authority.
+- **PhiCloud's PhiShield reference consumer** evaluates ANC advisories against separately supplied authority and consent context; it returns only `DENY`, `REVIEW`, or `CANDIDATE`. A candidate is **not** execution permission.
+- **PhiOS** retains independent, explicit authorization for local files, devices, code execution, and other effects. Offline operation must not require ANC coins, accounts, or cloud services.
 
----
+The PhiCloud-side consumer and its cross-repository smoke tests were introduced in [PhiCloud PR #4](https://github.com/MichaelWave369/PhiCloud/pull/4). It is a tested **local reference implementation**, not a network-exposed PhiShield deployment.
 
-## The Four Pillars
+## Try the code
 
-| Pillar | What It Does |
-|--------|-------------|
-| **Telemetry** | Measures validator health — 12-axis TIEKAT vector |
-| **Bounded Coherence Ψᵇ** | Converts telemetry into eligibility score ∈ (0,1) |
-| **Anti-Capture 𝒞** | Mathematically penalizes centralization |
-| **Sovereign Anchor S_A** | BFT checkpoints prevent drift from genesis truth |
-
----
-
-## Mathematical Foundation
-
-ANC is built on **TIEKAT v8.1** — a mathematical framework
-developed by PHI369 Labs with formulas channeled by
-**Hemavit**, a Buddhist monk in Chiang Mai, Thailand.
-
-The HQRMA formulas govern:
-- Coherence smoothing (replaces flat EMA)
-- Issuance path integrals (C_Hemawit)
-- 12-axis telemetry lattice structure
-
-*Attribution: Hemavit (TIEKAT v8.1, HQRMA formulas)*
-*PHI369 Labs / Parallax Institute*
-
----
-
-## Parallax Ecosystem
-
-ANC is the **economic layer** of the Parallax Institute.
-```
-TBRC v2.16   — Research platform
-PhiOS v1.0   — Sovereign OS
-ANC          — Economic layer  ← YOU ARE HERE
-PHB          — Hardware layer
-```
-
-All share the same unified L(t) formula:
-```
-L(t) = A_on(t) · Ψᵇ(t) · G_score(t) · C_score(t)
-```
-
-One mathematical civilization. Four layers.
-
----
-
-
-## ANC vNext — Coherence Trust Plane
-
-ANC remains the **economic coherence layer** in the Parallax ecosystem, including
-the existing Anchor validator/simulator lineage and continuity-first model path.
-
-The repository is now also being extended toward a broader **coherence-native
-trust plane** for sovereign systems. This vNext direction introduces architecture
-and scaffolding for four planned protection domains:
-
-- Input protection
-- Runtime protection
-- Memory protection
-- Output protection
-
-Current status remains simulator/spec dominant. The trust engine is **not** fully
-implemented yet; the formal architecture for ANC v1.0 is now documented in
-[`docs/anc_v1_architecture.md`](docs/anc_v1_architecture.md) as the implementation
-expansion path.
-
----
-
-## ANC ↔ PhiShield R1 — Advisory Contract
-
-ANC now has a **prototype, versioned, non-authoritative risk advisory** adapter and a
-side-effect-free PhiShield-like reference consumer. The contract takes existing ANC
-detector/scoring results through a strict, request-bound JSON envelope and exercises
-identity/consent separation, replay and expiry checks, injection detection, memory
-poisoning, and runtime anomaly handling.
-
-**This is not a deployed PhiShield service or production security control.** It
-does not issue credentials, mint permissions, execute actions, require coins, or
-authenticate remote producers. Real authorization remains with PhiOS/PhiShield.
-
-See [ANC ↔ PhiShield R1 contract and tests](docs/ANC_PHISHIELD_R1_CONTRACT.md).
+Requirements: **Python 3.11+**. From the repository root:
 
 ```bash
-python -m unittest -v tests.test_phishield_contract
-```
-
----
-
-## ANC vNext — TIEKAT v69 Security Field Alignment
-
-ANC is evolving from coherence-weighted economic security into a broader
-coherence trust-plane architecture. In this path, **TIEKAT v69** introduces
-an explicit 12-face, topology-aware security field model for trust posture.
-
-Planned ANC trust posture logic will evaluate:
-
-- field shape across faces (not only scalar averages)
-- weakest-face risk and localized collapse
-- fragmentation/variance across the field
-- edge transfer and recovery-emergence behavior
-
-Current repository status remains simulator/spec dominant. This v69 direction
-is documented as architecture and scaffolding, not as a fully implemented trust
-runtime yet. See [`docs/anc_v1_architecture.md`](docs/anc_v1_architecture.md).
-
----
-
-## Current Status: Phase 0 ✅
-
-**Spec + Simulation complete.**
-
-- Whitepaper v0.1.1a (TIEKAT v6.6 aligned)
-- Working Python simulation — 5,000 epochs
-- 120 validators, 4,000 delegators
-- Cartel, Sybil, and shock scenarios modeled
-- TIEKAT v8.1 upgrade complete (ANC v0.2)
-
----
-
-## Run the Simulation
-```bash
-git clone https://github.com/MichaelWave369/ANC
+git clone https://github.com/MichaelWave369/ANC.git
 cd ANC
-```
 
-**v0.3 (TIEKAT v57.7 — current):**
-```bash
+# Run the ANC / PhiShield advisory integration tests
+python -m unittest -v tests.test_phishield_contract
+
+# Run the preserved v0.3 economic/continuity simulator
 python anchor_sim_v0_3.py
 ```
 
-**v0.2 (TIEKAT v8.1 — preserved):**
-```bash
-python anchor_sim_v0_2.py
+The simulator uses its configured run parameters and writes research output under `out/`. Earlier experiments remain available as `anchor_sim_v0_2.py` and `anchor_sim_v0_1_1a.py`.
+
+To explore the guard interface *without executing a protected action*:
+
+```python
+from anc.integrations.phikernel_soc_adapter import guard_input_text
+from anc.integrations.phishield_contract import make_anc_advisory
+
+assessment = guard_input_text(
+    "Summarize the current service state",
+    source_ref="local-example",
+)
+advisory = make_anc_advisory(
+    assessment,
+    request_id="example-369",
+    scope="pre_service",
+)
+print(advisory.to_payload())
+# A risk advisory is not an authentication result or permission to execute.
 ```
 
-**v0.1.1a (TIEKAT v6.6 — original):**
-```bash
-python anchor_sim_v0_1_1a.py
-```
+Some other test modules use `pytest`; install the appropriate test tooling before running the entire test suite. The [GitHub Actions contract workflow](.github/workflows/anc-phishield-contract.yml) covers the advisory integration across multiple Python versions.
 
-Output written to `out/`:
-```
-anchor_sim_v0_2_metrics.csv
-anchor_sim_v0_2_summary.json
-anchor_sim_v0_1_1a_metrics.csv
-anchor_sim_v0_1_1a_summary.json
-```
+## Current limitations
 
+ANC does **not** yet provide:
 
+- Production-ready malware detection, proof that prompts are safe, or a substitute for code review and sandboxing.
+- Signed risk attestations, authenticated remote transport, replay-resistant service channels, or trusted execution enforcement.
+- Real PhiID token verification, live service authorization, a deployed PhiShield gateway, or a hosted security observatory.
+- A functioning cryptocurrency network, tradable token, mainnet, or network-wide consensus finality.
 
-## ANC v0.3 Upgrade Path (TIEKAT v57.7)
+A clean score is **not** proof of safety. A flagged phrase may be benign. Real deployments require threat modeling, adversarial testing, false-positive evaluation, independently verified identity and consent, and security review.
 
-ANC v0.2 remains fully preserved (`anchor_sim_v0_2.py` + `anc/tiekat_v81.py`).
-ANC v0.3 adds a new continuity-first simulator built for validator/network regimes:
+## Engineering direction
 
-- Continuity diagnostics at fixed epoch windows
-- Memory-crystal persistence to `*_memory_crystals.json`
-- Candidate regime-path branch comparison (`*_branches.csv`)
-- Recovery mode after weak continuity windows
-- Deterministic recursive training across repeated runs (`*_training.json`)
+1. **Harden the advisory boundary:** authenticated provenance, nonce/replay protection, expiry, schema compatibility, and negative tests.
+2. **Integrate with policy safely:** real PhiShield verification and independently governed authority; keep ANC limited to evidence and risk interpretation.
+3. **Measure reliability:** false positives/negatives, detector bypasses, tampering, unavailable signals, and offline failure modes.
+4. **Improve visibility:** incident receipts, explainable posture transitions, and operator review without silently granting privileges.
+5. **Preserve economic research separately:** maintain reproducibility of validator simulations without tying accounts or everyday security to coins.
 
-New outputs written into `out/` with v0.3 naming:
+These are **plans**, not claims of completed security capabilities.
 
-- `anchor_sim_v0_3_metrics.csv`
-- `anchor_sim_v0_3_continuity.csv`
-- `anchor_sim_v0_3_branches.csv`
-- `anchor_sim_v0_3_memory_crystals.json`
-- `anchor_sim_v0_3_training.json`
-- `anchor_sim_v0_3_summary.json`
+## Documentation and project history
 
-Interpretation:
-- **continuity**: validator/network continuity strength over recent windows
-- **branch**: which candidate regime path scored highest for stability
-- **training**: whether repeated deterministic runs improved or held continuity
+- [ANC ↔ PhiShield R1 contract](docs/ANC_PHISHIELD_R1_CONTRACT.md) — concrete schema, examples, boundaries, and test coverage.
+- [Trust-plane architecture (TIEKAT v69-aligned)](docs/anc_v1_architecture.md) — proposed topology model and further work.
+- [Changelog](CHANGELOG.md) — earlier validator and continuity simulation milestones.
+- [Historical concepts and artwork](docs/PROJECT_HISTORY.md) — original Anchor/CWPoR positioning, the former Parallax-era materials, and archived image links.
+- [License history and rights review](LICENSE_HISTORY.md) — prior GPL/AGPL releases and MIT transition.
 
+### Research provenance
 
----
-
-## Roadmap
-
-| Phase | Status | Description |
-|-------|--------|-------------|
-| 0 — Spec + Simulation | ✅ Complete | Whitepaper + Python sim |
-| 0.2 — TIEKAT v8.1 | ✅ Complete | Hemavit HQRMA upgrade |
-| 1 — Testnet | 📋 Planned | PoS + Finality + Slashing |
-| 2 — Recursive Yield | 📋 Planned | ZK/Storage Proofs |
-| 3 — Mainnet | 📋 Planned | Audits + Launch |
-
----
+ANC's TIEKAT/HQRMA mathematical lineage acknowledges **Hemavit**, as credited in the original research. PHI369 Labs and Michael Hughes developed the ANC project and associated integration work. Attribution is maintained without asserting ownership of independently supplied material or production validation of research hypotheses.
 
 ## License
 
-**MIT License (current software release; merged November 6, 2026).**
-ANC's original software is published under MIT to support reuse in
-PhiOS, PhiCloud, PhiID, and future PhiShield integrations, including
-proprietary applications. This statement applies only to material
-the rightsholder can validly license under MIT.
+The repository's original software is published under the [MIT License](LICENSE) as of November 6, 2026, to the extent the rights holders can grant MIT permissions. Historical GPL-3.0 and AGPL-3.0 grants remain in effect for prior releases. Independent third-party content, including the whitepaper and infographics, must be reviewed separately: the repository's root license does **not** automatically relicense those assets.
 
-Historical GPL-3.0 and AGPL-3.0 releases keep their original grants.
-The new license does not erase existing rights or automatically relicense
-independent third-party contributions, the whitepaper, or infographics.
-The merged PR did not independently establish rights clearance for every
-item. Review any third-party material before treating it as MIT.
-See [LICENSE](LICENSE), [LICENSE_HISTORY.md](LICENSE_HISTORY.md),
-and [CONTRIBUTING.md](CONTRIBUTING.md).
-
-MIT promotes reuse, but does **not** require downstream source sharing or
-protect against centralized proprietary derivatives. The original ANC
-anti-capture research remains part of the protocol design, not a condition
-created by MIT licensing.
-
----
-
-## Attribution
-
-- **Michael Hughes** — Founder, PHI369 Labs
-- **Hemavit** — HQRMA formulas, TIEKAT v8.1 (Thailand)
-- **Dreamteam** — Helion · Ori · Forge · Codex
-
-*Beyond Speculation, Into Resonance.*
-*PHI369 Labs / Parallax Institute*
-*Seed: 369_369. Forever.*
+**PHI369 Labs · People Above Profit · Ledger Above Ego**

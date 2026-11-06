@@ -250,15 +250,18 @@ Interpretation:
 
 ## License
 
-**MIT License (proposed transition).** ANC's original software is being
-prepared for MIT licensing to support reuse in PhiOS, PhiCloud, PhiID,
-and future PhiShield integrations, including proprietary applications.
+**MIT License (current software release; merged November 6, 2026).**
+ANC's original software is published under MIT to support reuse in
+PhiOS, PhiCloud, PhiID, and future PhiShield integrations, including
+proprietary applications. This statement applies only to material
+the rightsholder can validly license under MIT.
 
 Historical GPL-3.0 and AGPL-3.0 releases keep their original grants.
 The new license does not erase existing rights or automatically relicense
 independent third-party contributions, the whitepaper, or infographics.
-Before merging, verify that the relevant rightsholders have approved the
-change. See [LICENSE](LICENSE), [LICENSE_HISTORY.md](LICENSE_HISTORY.md),
+The merged PR did not independently establish rights clearance for every
+item. Review any third-party material before treating it as MIT.
+See [LICENSE](LICENSE), [LICENSE_HISTORY.md](LICENSE_HISTORY.md),
 and [CONTRIBUTING.md](CONTRIBUTING.md).
 
 MIT promotes reuse, but does **not** require downstream source sharing or

@@ -1,29 +1,40 @@
 # Contributing to ANC
 
-ANC is sovereign software built on TIEKAT mathematics.
+ANC is sovereign software built on TIEKAT mathematics. We welcome thoughtful,
+well-tested improvements to the original simulator and the developing trust plane.
 
-## Philosophy
+## License for new contributions
 
-ANC's Anti-Capture Operator 𝒞 penalizes centralization
-mathematically. Our development process reflects this.
+ANC's proposed current code license is **MIT** (see [LICENSE](LICENSE)).
 
-## License
+By submitting your original contribution, you agree it may be distributed under
+the MIT License, and you represent that you have the rights necessary to grant
+that permission. Do not submit code, text, images, formulas expressed in
+copyrighted source material, or other artifacts copied from incompatible or
+unlicensed sources.
 
-All contributions are AGPL-3.0. By contributing you agree
-your code remains open and reciprocal, including network-exposed use.
+The MIT License allows commercial use and closed-source derivatives; it **does
+not** require downstream modifications or network-hosted versions to remain open.
+If reciprocal source disclosure is essential for your contribution, discuss it
+before submitting a PR.
 
-## Attribution Rule
+Previously published GPL-3.0 and AGPL-3.0 ANC releases remain available under
+their historical terms. A new license file does not retroactively extinguish
+those grants or relicense third-party material without the rightsholder's consent.
+See [license history and rights review](LICENSE_HISTORY.md).
 
-If you use HQRMA formulas from TIEKAT v8.1,
-you must attribute Hemavit in your code comments.
-This is a requirement, not a suggestion.
+## Attribution rule
 
-## How to Contribute
+When incorporating HQRMA/TIEKAT-related work, preserve the documented credit
+to Hemavit and identify the origin of any independently supplied implementation,
+text, or data. This request does not waive or replace any third-party rights.
 
-1. Fork the repo
-2. Run the simulation: `python anchor_sim_v0_1_1a.py`
-3. Read the whitepaper: `docs/ANC_Whitepaper_v0_1_1a.docx`
-4. Open an issue before writing code
-5. PRs welcome — especially Phase 1 testnet work
+## How to contribute
 
-PHI369 Labs / Parallax Institute
+1. Fork the repository and open an issue describing the proposed change.
+2. Run the simulator: `python anchor_sim_v0_1_1a.py`.
+3. Read the whitepaper: `docs/ANC_Whitepaper_v0_1_1a.docx`.
+4. Run the relevant existing tests and include new tests when practical.
+5. Open a pull request, identifying any third-party dependencies or assets.
+
+PHI369 Labs
